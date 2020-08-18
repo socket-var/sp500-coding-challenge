@@ -1,44 +1,39 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# S&P Challenge:
 
-## Available Scripts
+## Problem statement:
 
-In the project directory, you can run:
+1. Download S&P 500 index returns by year (https://www.slickcharts.com/sp500/returns)
 
-### `yarn start`
+2. Build a single page app which shows a table similar to how it is displayed in the slickcharts link above
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+but, the year column is sorted ascending, and with an additional column `Cumulative returns` showing returns from the beginning
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+3. on top of the table have a slider component (https://github.com/react-component/slider)
 
-### `yarn test`
+use a range slider like the one in http://react-component.github.io/slider/examples/handle.html (Range with custom handle)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The range would be the start and end years
 
-### `yarn build`
+the table below would filter out to show only the years and the cumulative returns between them
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+for e.g say you have downloaded S&P 500 index returns from 1970 - 2018
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+the range slider on top would default to the maximim range (1970 - 2018)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+the table below would show each year in a row and the return and cumulative return
 
-### `yarn eject`
+If you change the range slider to 2000 to 2010
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+the table below would show only those 11 rows (2000 - 2010 both inclusive) and the cumulative return from 2000
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+You may upload the repository to GitHub under your profile once you are done
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Details:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- This repository uses React and TypeScript
+- The code is organized into a simple smart-dumb component relationship between App and HistoryTable components
+- To run this, in the root of the repository do `yarn install` and `yarn start`
 
-## Learn More
+## Demo Screen Recording:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+https://www.loom.com/share/8f09fef5815d4fc4b0c3ca56914bdf78
