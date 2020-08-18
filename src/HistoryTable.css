@@ -1,0 +1,35 @@
+.history-table {
+  width: 100%;
+}
+
+.table-header tr {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+tr {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+th,
+td {
+  padding: 10px;
+}
+
+.table-header,
+.table-body {
+  display: block;
+}
+
+.table-body td {
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+}
+
+.table-body tr {
+  background: rgb(250, 250, 250);
+}
+
+.table-body tr:hover {
+  background: rgba(0, 0, 0, 0.075);
+}

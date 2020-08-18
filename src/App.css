@@ -1,0 +1,28 @@
+.App-header {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.body-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.year-range-container {
+  width: 200px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.range-container {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px;
+}
