@@ -57,11 +57,12 @@ class App extends React.Component<ComponentProps> {
       .map(({ totalReturn }) => totalReturn)
       .reduce<number[]>(
         (acc, current) => {
-          let newValue: any =
+          let cumulative: number =
             (1 + acc[acc.length - 1] / 100) * (1 + current / 100);
-          newValue = (newValue - 1) * 100;
-          newValue = newValue.toFixed(2).toString();
-          acc.push(newValue);
+          cumulative = (cumulative - 1) * 100;
+          /** toFixed retuns string with trailing zeroes so cast it to a number */
+          cumulative = Number(cumulative.toFixed(2));
+          acc.push(cumulative);
           return acc;
         },
         [0]
